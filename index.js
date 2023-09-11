@@ -7,12 +7,14 @@ let day = weekday[d.getDay()];
 
 function updateTime() {
     const now = new Date();
-    const hours = now.getUTCHours();
-    const minutes = now.getUTCMinutes();
-    const seconds = now.getUTCSeconds();
+    // const hours = now.getUTCHours();
+    // const minutes = now.getUTCMinutes();
+    // const seconds = now.getUTCSeconds();
+    const time = now.getTime();
 
     // Format the string with leading zeroes
-    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    // const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    const clockStr = time.toString()
 
     timeElement.innerText = clockStr;
 }
